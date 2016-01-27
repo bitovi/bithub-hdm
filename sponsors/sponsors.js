@@ -11,7 +11,7 @@ var SponsorsBit = can.Model.extend({
 });
 
 export default can.Component.extend({
-	tag: 'hg-sponsors',
+	tag: 'hdm-sponsors',
 	template: initView,
 	scope : {
 		currentBitIdx: 0,
@@ -26,6 +26,20 @@ export default can.Component.extend({
 			if(this.attr('bits').isResolved()){
 				return this.attr('bits.' + this.attr('currentBitIdx'));
 			}
+		},
+		sponsors : function(){
+			var index = this.attr('currentBitIdx');
+			var list = new can.List();
+			var bits = this.attr('bits');
+			var length = bits.attr('length');
+			for(var i = 0; i < 3; i++){
+				list.push(bits.attr(index));
+				index++;
+				if(index === length){
+					index = 0;
+				}
+			}
+			return list;
 		}
 	},
 	events : {
@@ -43,7 +57,7 @@ export default can.Component.extend({
 			setTimeout(function(){
 				var currentBitIdx = self.scope.attr('currentBitIdx');
 				var length = self.scope.attr('bits.length');
-				var nextIdx = currentBitIdx + 1;
+				var nextIdx = currentBitIdx + 3;
 				if(nextIdx >= length){
 					nextIdx = 0;
 				}

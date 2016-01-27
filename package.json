@@ -1,5 +1,5 @@
 {
-  "name": "hospice",
+  "name": "hdm",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -9,12 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "can": "^2.3.6",
-    "steal": "^0.13.0-pre.3"
+		"jquery": "2.1.4",
+    "can": "2.3.8",
+    "steal": "0.13.0-pre.3",
+    "steal-tools": "0.13.3"
   },
-	"system": {
-		"configDependencies": [
-			"live-reload"
-		]
-	}
+  "system": {
+    "configDependencies": [
+      "live-reload"
+    ]
+  }
 }

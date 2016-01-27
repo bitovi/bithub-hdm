@@ -14,7 +14,7 @@ var Bit = can.Model.extend({
 }, {});
 
 var Hub = can.Component.extend({
-	tag: 'hg-hub',
+	tag: 'hdm-hub',
 	template: initView,
 	scope : {
 		currentBitIdx: 0,
@@ -108,6 +108,6 @@ var Hub = can.Component.extend({
 	}
 });
 
-var template = stache("<hg-hub></hg-hub>");
+var template = stache("<hdm-hub></hdm-hub>");
 
 $('#app').html(template());
