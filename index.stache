@@ -3,6 +3,7 @@
 </div>
 <div class="main-area">
   <header>
+    <img src="./images/h-logo-04.svg" class="logo">
     <img class="powered-by" src="./images/powered_by.png"/>
   </header>
 
@@ -49,7 +50,6 @@
   <footer>
     <i class="fa fa-instagram"></i>
     <i class="fa fa-twitter"></i>
-    <i class="fa fa-facebook"></i>
     Connect with us on social media with the <b>#HerrinChamber</b> hashtag!
   </footer>
 </div>
